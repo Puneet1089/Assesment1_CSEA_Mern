@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Create Your Resume</h2>
+        <form id="resume-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="linkedin">LinkedIn Profile:</label>
+                <input type="url" id="linkedin" placeholder="LinkedIn profile URL (optional)">
+            </div>
+            <div class="form-group">
+                <label for="github">GitHub Profile:</label>
+                <input type="url" id="github" placeholder="GitHub profile URL (optional)">
+            </div>
+            <div class="form-group">
+                <label for="experience">Work Experience:</label>
+                <textarea id="experience" rows="4" placeholder="Describe your work experience..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="education">Education:</label>
+                <textarea id="education" rows="4" placeholder="Describe your educational background..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="photo">Upload Photo:</label>
+                <input type="file" id="photo" accept="image/*">
+            </div>
+            <button type="button" class="btn" onclick="generateResume()">Generate Resume</button>
+        </form>
+
+        <div id="resume-preview">
+            <div id="photo-preview"></div>
+            <h2 id="preview-name"></h2>
+            <div class="contact-info">
+                <p id="preview-email"></p>
+                <p id="preview-phone"></p>
+                <p id="preview-linkedin"></p>
+                <p id="preview-github"></p>
+            </div>
+            <div class="section">
+                <h3 class="section-title">Work Experience</h3>
+                <div class="content">
+                    <p id="preview-experience"></p>
+                </div>
+            </div>
+            <div class="section">
+                <h3 class="section-title">Education</h3>
+                <div class="content">
+                    <p id="preview-education"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
